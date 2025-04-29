@@ -1,4 +1,4 @@
-// Show the welcome screen for 3 seconds, then display the main content
+// Show welcome screen for 2 seconds, then switch to main content
 window.onload = function () {
     setTimeout(function () {
         document.getElementById('welcome-screen').style.display = 'none';
@@ -6,7 +6,29 @@ window.onload = function () {
     }, 2000);
 };
 
-// Nutrition form event listener
+// Dummy meal plan with Unsplash image URLs
+function generateMealPlan(age, proteinGrams, carbsGrams, fatGrams, isDiabetic, bloodPressure) {
+    return {
+        breakfast: {
+            text: "Oatmeal with berries and a boiled egg",
+            image: "https://source.unsplash.com/600x400/?healthy-breakfast"
+        },
+        lunch: {
+            text: "Grilled chicken with quinoa and veggies",
+            image: "https://source.unsplash.com/600x400/?healthy-lunch"
+        },
+        dinner: {
+            text: "Salmon with brown rice and steamed broccoli",
+            image: "https://source.unsplash.com/600x400/?healthy-dinner"
+        },
+        snacks: {
+            text: "Almonds and Greek yogurt",
+            image: "https://source.unsplash.com/600x400/?healthy-snacks"
+        }
+    };
+}
+
+// Nutrition form submission
 document.getElementById('nutritionForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -84,5 +106,5 @@ document.getElementById('nutritionForm').addEventListener('submit', function (e)
         <li><strong>Snacks:</strong> ${mealPlan.snacks.text}<br>
             <img src="${mealPlan.snacks.image}" alt="Snacks" class="meal-image"></li>
     </ul>
-    `;
+  `;
 });
