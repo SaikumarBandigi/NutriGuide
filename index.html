@@ -7,12 +7,26 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Nutrition Plan Form and Result -->
-    <div class="nutrition-container" id="nutrition-container">
+    <!-- Welcome Screen with Nutrition Image -->
+    <div class="welcome-screen" id="welcome-screen">
+      <h2 class="welcome-heading">Nutri Guide</h2>
+      <img
+        src="/photos/Nutrition.jpg"
+        alt="Nutrition Plan"
+        class="welcome-image"
+      />
+    </div>
+
+    <!-- Main Content (Nutrition Form and Result) -->
+    <div
+      class="nutrition-container"
+      id="nutrition-container"
+      style="display: none"
+    >
       <div class="nutrition-content">
         <!-- Nutrition Plan Form -->
         <div class="nutrition-form">
-          <h2>Personalized Nutrition Plan</h2>
+          <h2>Nutri Guide</h2>
           <form id="nutritionForm">
             <input type="number" id="age" placeholder="Age" required />
             <select id="gender" required>

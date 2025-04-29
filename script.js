@@ -1,3 +1,12 @@
+// Show the welcome screen for 3 seconds, then display the main content
+window.onload = function () {
+    setTimeout(function () {
+        document.getElementById('welcome-screen').style.display = 'none';
+        document.getElementById('nutrition-container').style.display = 'flex';
+    }, 2000);
+};
+
+// Nutrition form event listener
 document.getElementById('nutritionForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -77,56 +86,3 @@ document.getElementById('nutritionForm').addEventListener('submit', function (e)
     </ul>
     `;
 });
-
-function generateMealPlan(age, protein, carbs, fat, isDiabetic, bloodPressure) {
-    const ageFactor = age < 30 ? 'young' : age < 50 ? 'middle-aged' : 'senior';
-
-    const meals = {
-        young: [
-            "Smoothie with banana, whey protein, and almond milk",
-            "Grilled chicken with quinoa and veggies",
-            "Salmon with brown rice and asparagus",
-            "Greek yogurt with nuts and honey"
-        ],
-        "middle-aged": [
-            "Oatmeal with berries and flaxseeds",
-            "Turkey sandwich with whole-grain bread",
-            "Grilled fish with steamed broccoli",
-            "Cottage cheese with almonds"
-        ],
-        senior: [
-            "Scrambled eggs with avocado toast",
-            "Lentil soup with whole wheat bread",
-            "Baked cod with spinach and quinoa",
-            "Soft fruits and yogurt"
-        ]
-    };
-
-    const images = {
-        young: [
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-            "https://images.unsplash.com/photo-1519708227418-c8fd9a32b1a3",
-            "https://images.unsplash.com/photo-1624290524426-8a4e9e5d73eb",
-            "https://images.unsplash.com/photo-1495521821757-a1efb6729352"
-        ],
-        "middle-aged": [
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-            "https://images.unsplash.com/photo-1560717848-2c764b0c0fd5",
-            "https://images.unsplash.com/photo-1599392184290-9b8e5f4835ce",
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-        ],
-        senior: [
-            "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
-            "https://images.unsplash.com/photo-1611339555312-e607c8356fd7",
-            "https://images.unsplash.com/photo-1599392184290-9b8e5f4835ce",
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-        ]
-    };
-
-    return {
-        breakfast: { text: meals[ageFactor][0], image: images[ageFactor][0] },
-        lunch: { text: meals[ageFactor][1], image: images[ageFactor][1] },
-        dinner: { text: meals[ageFactor][2], image: images[ageFactor][2] },
-        snacks: { text: meals[ageFactor][3], image: images[ageFactor][3] }
-    };
-}

@@ -15,11 +15,37 @@ body {
     padding: 20px;
 }
 
+/* Welcome Screen Styles */
+.welcome-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.welcome-image {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.welcome-heading {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
 /* Nutrition Container Styles */
 .nutrition-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    width: 100%;
 }
 
 .nutrition-content {
@@ -37,6 +63,7 @@ body {
     box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.1), inset -6px -6px 10px rgba(255, 255, 255, 0.7);
 }
 
+/* Additional Styling for Form Elements */
 .nutrition-form input,
 .nutrition-form select,
 .nutrition-form button {
