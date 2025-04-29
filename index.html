@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrition Plan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nutrition Plan Form and Result -->
+    <div class="nutrition-container" id="nutrition-container">
+      <div class="nutrition-content">
+        <!-- Nutrition Plan Form -->
+        <div class="nutrition-form">
+          <h2>Personalized Nutrition Plan</h2>
+          <form id="nutritionForm">
+            <input type="number" id="age" placeholder="Age" required />
+            <select id="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <input
+              type="number"
+              id="weight"
+              placeholder="Weight (kg)"
+              required
+            />
+            <input
+              type="number"
+              id="height"
+              placeholder="Height (cm)"
+              required
+            />
+            <select id="bloodPressure" required>
+              <option value="normal">Normal</option>
+              <option value="elevated">Elevated</option>
+              <option value="high">High</option>
+            </select>
+            <input
+              type="number"
+              id="dietPlan"
+              placeholder="Plan Duration (weeks)"
+              required
+            />
+            <label><input type="checkbox" id="diabetic" /> Diabetic</label>
+            <button type="submit">Generate Plan</button>
+          </form>
+        </div>
+
+        <!-- Nutrition Plan Result -->
+        <div class="nutrition-result">
+          <div id="result"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
